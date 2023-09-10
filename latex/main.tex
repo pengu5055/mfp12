@@ -235,7 +235,41 @@ ustvarjenje modela, za učenje modela, za napovedovanje in za izris ROC krivulje
 \texttt{torch.nn.Sigmoid}. Za učenje sem uporabil \textbf{Stochastic gradient descent} \texttt{torch.optim.SGD} in kot smo 
 rekli v uvodu kar \texttt{torch.nn.MSELoss} za funkcijo izgube.
 \section{Rezultati}
+\subsection{BDT}
+Glavni parameter, ki ga lahko spreminjamo pri algoritmu BDT je število dreves, ki jih uporabimo. Začel sem z 100 drevesi in
+nato število dreves povečeval. Logično sledi obvezna primerjava med časom izračunov na GPU in na CPU. GPU je RTX 3060Ti,
+CPU pa Ryzen 5 3600X. Rezultati so prikazani na sliki \ref{fig:BDT_times}. \\
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../images/raw_performance.png}
+    \caption{Čas izračuna BDT modela na GPU in CPU.}
+    \label{fig:BDT_times}
+\end{figure}
+
+Kot vidimo je čas izračuna na GPU veliko hitrejši. Čeprav je to pričakovano, je vseeno zanimivo videti, da je razlika v času
+izračuna kar precejšnja. Zdaj lahko vsi prepričujemo svoje starše, da potrebujemo grafično kartico za študij. Smiselno je pogledati
+še druga dva pomembna parametra in sicer \textit{learning rate} in \textit{max\_depth}. So na sliki \ref{fig:BDT_params}. \\
+
+\begin{figure}[H]
+    \centering
+    \makebox[\textwidth][c]{%
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/lr_sweep.png}
+    \end{minipage}%
+    \hspace{0.1\textwidth}% 
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/}
+    \end{minipage}%
+    }
+    \caption{Vpliv \textit{learning rate} in \textit{max\_depth} na uspešnost BDT modela.}
+\end{figure}
+
+\subsection{NN}
+V glavnem sem tu poskusil rekreirati profesorjeve rezultate. Zaradi velikosti podatkovnega seta in pa narave 
+učenja NN modelov, traja učenje kar nekaj časa. 
 
 \section{Komentarji in izboljšave}
 
