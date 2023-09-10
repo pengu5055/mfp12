@@ -298,10 +298,28 @@ veliko ceno v času izračuna.
 \subsection{NN}
 V glavnem sem tu poskusil rekreirati profesorjeve rezultate. Zaradi velikosti podatkovnega seta in pa narave 
 učenja NN modelov, traja učenje kar nekaj časa. Žal zaradi mojih lastnih napak, nimam dovolj časa, da bi se 
-igral z vsemi parametri in bi lahko naredil kakšno boljšo analizo. 
+igral z vsemi parametri in bi lahko naredil kakšno boljšo analizo. Ker je že učenje z GPU trajalo dolgo, 
+se testov z CPU sploh lotil nisem. Vseeno pa sem narisal odvisnost časa učenja od števila epoh, ki je na sliki
+\ref{fig:NN_times}. \\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../images/NNraw_performance.png}
+    \caption{Čas učenja NN modela na GPU.}
+    \label{fig:NN_times}
+\end{figure}
+
+Vidimo, da je čas precej linearno odvisen in kar dolg, še sploh v primerjavi z hitrostjo BDT modela. Se mi zdi,
+da bi jaz v praksi uporabljal BDT model, za reševanje tega problema.
+
 
 \section{Komentarji in izboljšave}
+Predvsem je problem pri tej nalogi, da je ML tako čudovito področje, meni pa je zmanjkalo časa, da bi se lahko
+igral z njim v tem akademskem smislu. Želim si tudi, da bi lahko izrisal tudi kakšne lepše grafe dejanskih
+rezultatov, ker trenutno je bilo vse skupaj malo bolj abstrahirano samo na te hiperparametre. Pravzaprav 
+bi si pri vseh grafih želel kaj dodati, ampak žal mi je zmanjkalo časa. \\
 
+Hvala za vso znanje, ki sem ga pridobil profesor. \\
 
 \newpage
 \bibliographystyle{unsrt}

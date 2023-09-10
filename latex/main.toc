@@ -9,4 +9,4 @@
 \contentsline {subsection}{\numberline {4.1}BDT}{6}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}NN}{8}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Komentarji in izboljšave}{8}{section.5}%
-\contentsline {section}{Literatura}{9}{section*.6}%
+\contentsline {section}{Literatura}{9}{section*.7}%

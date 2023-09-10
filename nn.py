@@ -187,4 +187,19 @@ class WhereAreThouHiggs():
         from torchviz import make_dot
 
         make_dot(self.yhat, params=dict(list(self.model.named_parameters()))).render("nn_torchviz", format="png")
+
+    def plot_score(label, score, fn):
+        score_bkg = score[np.where(label == 0)]
+        score_sig = score[np.where(label == 1)]
+    
+        plt.figure(figsize=[10, 5])
+        plt.hist(score_sig, label="Signal", density=True, bins=30, histtype='step', color=c_set[4])
+        plt.hist(score_bkg, label="Background", density=True, bins=30, histtype='step', color=c_set[6])
+        plt.xlabel('Score')
+        plt.title("Training Score Sig/Bkg Plot")
+        plt.ylabel("Fraction")
+        plt.legend()
+        plt.savefig(fn)
+        plt.show()
+
     
