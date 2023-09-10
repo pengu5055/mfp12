@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{lamkhede2021recommendations}
+Sudarshan Lamkhede and Christoph Kofler.
+\newblock Recommendations and results organization in netflix search, 2021.
+
+\bibitem{Steck_Baltrunas_Elahi_Liang_Raimond_Basilico_2021}
+Harald Steck, Linas Baltrunas, Ehtsham Elahi, Dawen Liang, Yves Raimond, and
+  Justin Basilico.
+\newblock Deep learning for recommender systems: A netflix case study.
+\newblock {\em AI Magazine}, 42(3):7--18, Nov. 2021.
+
+\bibitem{10.1145/2959100.2959174}
+Chao-Yuan Wu, Christopher~V. Alvino, Alexander~J. Smola, and Justin Basilico.
+\newblock Using navigation to improve recommendations in real-time.
+\newblock In {\em Proceedings of the 10th ACM Conference on Recommender
+  Systems}, RecSys '16, page 341–348, New York, NY, USA, 2016. Association
+  for Computing Machinery.
+
+\end{thebibliography}

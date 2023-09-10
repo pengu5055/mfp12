@@ -1,0 +1,136 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[slovene]{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[nottoc]{tocbibind}
+\usepackage{minted}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{ dsfont }
+\usepackage{siunitx}
+\usepackage{multimedia}
+\usepackage[table,xcdraw]{xcolor}
+\setlength\parindent{0pt}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\newcommand{\ddd}{\mathrm{d}}
+\newcommand\myworries[1]{\textcolor{red}{#1}}
+\newcommand{\Dd}[3][{}]{\frac{\ddd^{#1} #2}{\ddd #3^{#1}}}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \includegraphics[]{logo.png}
+        \vspace*{3cm}
+        
+        \Huge
+        \textbf{Strojno učenje (machine learning)}
+        
+        \vspace{0.5cm}
+        \large
+        12. naloga pri Matematično-fizikalnem praktikumu
+
+        \vspace{4.5cm}
+        
+        \textbf{Avtor:} Marko Urbanč (28191096)\ \\
+        \textbf{Predavatelj:} prof. dr. Borut Paul Kerševan\ \\
+        
+        \vspace{2.8cm}
+        
+        \large
+        8.9.2023
+    \end{center}
+\end{titlepage}
+\tableofcontents
+\newpage
+\section{Uvod}
+Medtem ko se je še nedavno zdelo strojno učenje prava temna magija (vsaj meni), je pravzaprav dandanes
+uporaba različnih algoritmov strojnega učenja popolnoma vsakdanja in že rutinska. Ljudje se pravzaprav 
+stalno srečujemo z različnimi algoritmi strojnega učenja, ki nam pomagajo pri različnih stvareh, kot so
+npr. priporočila na Netflixu, Googlovi iskalni algoritmi, različni algoritmi za prepoznavanje objektov na
+slikah, itd. Vse to so algoritmi, ki so zasnovani na strojnem učenju. \\
+
+Prvotno sem želel pustiti prejšnji stavek brez pojasnila, vendar sem se odločil, da bom vseeno napisal nekaj 
+besed o kar mislim. Poglejmo prvo Netflix. Netflix je spletna storitev za ogled filmov in serij. Ker je na Netflixu 
+ogromno filmov in serij, je težko najti tisto, kar bi si želeli ogledati. Zato Netflix uporablja algoritem, ki na 
+podlagi vaših prejšnjih ogledov in ocen priporoča filme in serije, ki bi vam lahko bili všeč 
+\cite{lamkhede2021recommendations}. Ampak ne samo to, glede na to iz katere naprave gledate, ob kakšnem času dneva in 
+drugih parametrih, ki jim Netflix pravi Kontekst \cite{Steck_Baltrunas_Elahi_Liang_Raimond_Basilico_2021}, pravzaprav 
+so pa to \textit{contextual bandits}, ki se uporabljajo v enem okusu strojnega učenja. Več o tem kasneje. V kolikor 
+sem uspel razumeti ta članek zgleda, da še več kot to, želijo praktično \textit{in real time} prilagajati priporočila, 
+glede na to kakšen je vaš t.i. \textit{intent} \cite{10.1145/2959100.2959174}. Oh in vsi, ki si med seboj delite 
+Netflix račune, nikakor ne skrbite, tudi to vas zna nekoč tepst kakšen algoritem strojnega 
+učenja \cite{esmaeilzadeh2022abuse}. \\
+
+Nadalje, Google. Google je spletni iskalnik, ki ga praktično vsi uporabljamo. Google uporablja algoritme strojnega
+že precej dolgo časa. Leta 2015 so predstavili deep learning sistem RankBrain, ki je bil namenjen izboljšanju
+rezultatov iskanja. RankBrain je bil namenjen predvsem iskanju poizvedb, ki jih Google še nikoli ni videl.
+RankBrain je bil zasnovan tako, da je na podlagi preteklih iskanj in rezultatov iskanj, ki so jih uporabniki
+izbrali, izboljševal rezultate iskanja. Od 2018 naprej so v Google Search v rabi nevronske mreže, ki so namenjene
+predvsem izboljšanju rezultatov iskanja. Od 2019 naprej pa Google uporablja tudi BERT \cite{47751}, ki je bil ogromen
+korak naprej v razumevanju naravnega jezika. \\
+
+Na hitro o tipih strojnega učenja oz. osnovnih vrstah algoritmov strojnega učenja. Poznamo
+
+\begin{itemize}
+    \item Nadzorovano učenje (supervised learning)
+    \begin{itemize}
+        \item Klasifikacija (classification): Sortiranje podatkov v razrede. Primer: Razpoznavanje številk na sliki.
+        \item Regresija (regression): Modeliranje odvisnosti med podatki. Primer: Napovedovanje cene nepremičnine.
+    \end{itemize}
+    \item Nenadzorovano učenje (unsupervised learning)
+    \item Stimulirano učenje (reinforcement learning)
+\end{itemize}
+
+Poglejmo si zdaj uporabo strojnega učenja v fizikalnem kontekstu. V fiziki se strojno učenje uporablja za različne
+namene. Največkrat uporabljamo algoritme prvega tipa, torej jih nadzorovano učimo. V fiziki visokih energij se strojno
+učenje uporablja za razpoznavanje delcev v detektorjih, za razpoznavanje različnih pojavov, za izboljšanje različnih 
+meritev, itd. To je nekaj kar bomo tudi sami počeli v tej nalogi. Iskali bomo Higgsov bozon v podatkih, ki jih je
+zbrala ATLAS kolaboracija. \\
+
+\subsection{Kako delujejo algoritmi strojnega učenja?}
+Pred tem, pa še osnovno o tem, kako sploh delujejo algoritmi strojnega učenja. Imamo nabor parametrov $\mathcal{D} = 
+\{(x_k, y_k)\}_{k=1}^N$
+
+
+\section{Naloga}
+
+\section{Opis reševanja}
+
+\section{Rezultati}
+
+
+\section{Komentarji in izboljšave}
+
+
+\newpage
+\bibliographystyle{unsrt}
+\bibliography{sources}
+\end{document}
