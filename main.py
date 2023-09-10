@@ -24,14 +24,14 @@ bagging_temperatures = [0.1, 0.5, 1]
 
 # --- Run the Model ---
 # First lets measure raw performance
-trees = np.arange(100, 1000, 100)
+trees = np.arange(100, 1000, 10)
 results = []
 for t in trees:
     print(f"Training with {t} trees...")
-    m, time, = bm.train(max_trees=t, verbose=False)
+    m, time, = bm.train(max_trees=t, task_type="CPU", verbose=False)
     auc = bm.performance()
     results.append([t, time, auc])
 
 # Save the results
 results = pd.DataFrame(results, columns=["Trees", "Time", "AUC"])
-results.to_csv("results/raw_performance_GPU.csv", index=False)
+results.to_csv("results/raw_performance_CPU.csv", index=False)

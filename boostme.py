@@ -39,13 +39,13 @@ class BoostMe():
             result = func(*args, **kwargs)
             end = time.time()
             print(f"Function {func.__name__} took {end - start} seconds to run.")
-            return result, start - end
+            return result, end - start
         return wrapper
 
     def _load_data(self):
         # Load data from HDF5
         # Remove the .h5 extension if it was already given
-        self.dataset_path = self.dataset_path.remove_suffix('.h5')
+        self.dataset_path = self.dataset_path.removesuffix('.h5')
         self.dataset_path = self.dataset_path + '.h5' # Add the .h5 extension to make sure it is there
 
         print(f"Loading data from {self.dataset_path}...")
@@ -94,7 +94,6 @@ class BoostMe():
         auc = roc_auc_score(self.vl_y, preds)
 
         print(f"AUC Score: {auc}")
-        print(self.model.evals_result_)
         return auc
 
     def plot_roc(self):
