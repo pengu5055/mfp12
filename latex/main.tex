@@ -9,6 +9,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage{ dsfont }
 \usepackage{siunitx}
 \usepackage{multimedia}
@@ -51,7 +52,7 @@
         \vspace*{3cm}
         
         \Huge
-        \textbf{Strojno učenje (machine learning)}
+        \textbf{Strojno učenje}
         
         \vspace{0.5cm}
         \large
@@ -94,7 +95,7 @@ Nadalje, Google. Google je spletni iskalnik, ki ga praktično vsi uporabljamo. G
 rezultatov iskanja. RankBrain je bil namenjen predvsem iskanju poizvedb, ki jih Google še nikoli ni videl.
 RankBrain je bil zasnovan tako, da je na podlagi preteklih iskanj in rezultatov iskanj, ki so jih uporabniki
 izbrali, izboljševal rezultate iskanja. Od 2018 naprej so v Google Search v rabi nevronske mreže, ki so namenjene
-predvsem izboljšanju rezultatov iskanja. Od 2019 naprej pa Google uporablja tudi BERT \cite{47751}, ki je bil ogromen
+predvsem izboljšanju rezultatov iskanja. Od 2019 naprej pa Google uporablja tudi BERT \cite{BERT}, ki je bil ogromen
 korak naprej v razumevanju naravnega jezika. \\
 
 Na hitro o tipih strojnega učenja oz. osnovnih vrstah algoritmov strojnega učenja. Poznamo
@@ -117,7 +118,45 @@ zbrala ATLAS kolaboracija. \\
 
 \subsection{Kako delujejo algoritmi strojnega učenja?}
 Pred tem, pa še osnovno o tem, kako sploh delujejo algoritmi strojnega učenja. Imamo nabor parametrov $\mathcal{D} = 
-\{(x_k, y_k)\}_{k=1}^N$
+\{(x_k, y_k)\}_{k=1}^N$, kjer je $x_k = (x_k^1,...x_k^M)$ naključno izbrani vektor z $M$ lastnostmi oz. 
+\textit{karakteristikami}, $y_k = (y_k^1,...,y_k^Q)$  pa je vektor $Q$ ciljnih vrednosti, ki so lahko diskretne ali
+realna števila ali kaj drugega (npr. barve, ki jim tudi lahko priredimo številske vrednosti). Vrednosti $(x_k, y_k)$
+so neodvisne in porazdeljene po neznani porazdelitvi $\mathcal{P}(\cdot,\>\cdot)$. Cilj strojnega učenja je poiskati
+oz. priučiti preslikavo $h: \mathbb{R}^Q \rightarrow \mathbb{R}$, ki bo minimizirala pričakovano vrednost funkcije 
+izgube (angl. loss function) $\mathcal{L}(h)$
+
+\begin{equation}
+    \mathcal{L}(h) = \mathbb{E}\mathrm{L}(\vec{y}, \vec{h}(\vec{x})) = \frac{1}{N} \sum_{k=1}^N{\mathrm{L}(y_k, \vec{h}(x_k))}\>,
+\end{equation}
+
+kjer je $\mathrm{L}(\cdot,\cdot)$ gladka funkcija, ki opisuje oceno za kvaliteto napovedi, pri čemer so $(\vec{x}, \vec{y})$
+neodvisno vzorčene iz nabora $\mathcal{D}$ po porazdelitvi $\mathcal{P}(\cdot,\cdot)$. Po koncu učenja imamo torej na voljo 
+funkcijo $h(\vec{x})$, ki nam za nek vhodni nabor vrednosti $\hat{x}$ poda napoved $\hat{y} = \vec{h}(\hat{x})$., ki ustrezno
+kategorizira ta nabor vrednosti.\\
+
+Funkcije $\vec{h}$ so v praksi sestavljene iz množice preprostih funkcij z prostimi parametri, kar na koncu seveda pomeni 
+velik skupni nabor neznanih parametrov in zahteven postopek postopek minimizacije funkcije izgube.
+
+\subsection{Odločitvena drevesa (Decision trees)}
+Odločitvena drevesa so ena izmed najbolj preprostih metod strojnega učenja. Odločitvena drevesa so sestavljena iz
+vozlišč in povezav. Vozlišča so povezana z povezavami, ki so lahko usmerjene ali neusmerjene. Osnovni gradnik
+odločitvenega drevesa je kar stopničasta funkcija $\mathrm{H}(x_i,-t_i) = 0,1$, ki je enaka ena za $x_i > t_i$ in
+nič za $x_i < t_i$, kjer je $x_i$ ena izmed karakteristik in $t_i$ neznani parameter. Iz skupine takšnih funkcij,
+ki predstavljajo binarne odločitve lahko skonstruiramo končno uteženo funkcijo 
+
+\begin{equation}
+    \vec{h} = \sum_{i=1}^J{\vec{w}_i \mathrm{H}(x_i, -t_i)}\>,
+\end{equation}
+
+kjer so $\vec{w}_i$ vektorji neznanih uteži. Tako $t_i$ kot $\vec{w}_i$ lahko določimo, v procesu učenja. 
+Nadgradnjo odločitvenih dreves predstavljajo pospešena odločitvena drevesa (angl. boosted decision trees), ki uporabljajo
+več odločitvenih dreves, ki so med seboj povezana. Temelijo pa na Gradient Boosting algoritmu \cite{Friedman_2001}, ki je 
+bil razvit leta 1999 in je bil namenjen izboljšanju napovedi. Gradient Boosting algoritem je bil razvit za regresijske 
+probleme, vendar se ga da uporabiti tudi za klasifikacijske probleme in je v praksi zelo uspešen. \\
+
+\subsection{Nevronske mreže (Neural networks)}
+
+
 
 
 \section{Naloga}

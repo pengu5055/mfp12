@@ -1,7 +1,10 @@
 \babel@toc {slovene}{}\relax 
 \contentsline {section}{\numberline {1}Uvod}{2}{section.1}%
-\contentsline {section}{\numberline {2}Naloga}{2}{section.2}%
-\contentsline {section}{\numberline {3}Opis reševanja}{2}{section.3}%
-\contentsline {section}{\numberline {4}Rezultati}{2}{section.4}%
-\contentsline {section}{\numberline {5}Komentarji in izboljšave}{2}{section.5}%
-\contentsline {section}{Literatura}{3}{section*.2}%
+\contentsline {subsection}{\numberline {1.1}Kako delujejo algoritmi strojnega učenja?}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Odločitvena drevesa (Decision trees)}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Nevronske mreže (Neural networks)}{4}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Naloga}{4}{section.2}%
+\contentsline {section}{\numberline {3}Opis reševanja}{4}{section.3}%
+\contentsline {section}{\numberline {4}Rezultati}{4}{section.4}%
+\contentsline {section}{\numberline {5}Komentarji in izboljšave}{4}{section.5}%
+\contentsline {section}{Literatura}{5}{section*.2}%
