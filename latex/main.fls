@@ -155,6 +155,8 @@ INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsb
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\doublestroke\dsfont.sty
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\doublestroke\dsfont.sty
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\siunitx\siunitx.sty
@@ -266,7 +268,11 @@ INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\ams
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam7.pfb
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam7.pfb
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb

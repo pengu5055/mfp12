@@ -10,6 +10,7 @@
 \usepackage{subcaption}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage{ dsfont }
 \usepackage{siunitx}
 \usepackage{multimedia}
@@ -155,6 +156,47 @@ bil razvit leta 1999 in je bil namenjen izboljšanju napovedi. Gradient Boosting
 probleme, vendar se ga da uporabiti tudi za klasifikacijske probleme in je v praksi zelo uspešen. \\
 
 \subsection{Nevronske mreže (Neural networks)}
+Pri nevronskih mrežah gre za to, da imamo množico nevronov, ki so med seboj povezani. Vsak nevron je povezan z vsakim 
+nevronom v naslednjem sloju. Nevroni so med seboj povezani z utežmi, ki jih lahko spreminjamo. Slojev je lahko več,
+odvisno od tega, kako kompleksen model želimo. Poznamo vidne sloje, skrite sloje in izhodne sloje. Nevroni v vidnem
+sloju so povezani z vhodnimi podatki, nevroni v skritih slojih so žal za nas neke sorte \textit{black box}, ki ga
+ne moremo razumeti, izhodni sloj pa nam poda napoved. Nevronske mreže so zelo uspešne pri klasifikaciji in regresiji. 
+Obstaja tudi cel kup podvrst nevronskih mrež, kot so npr. konvolucijske nevronske mreže, ki so zelo uspešne pri
+razpoznavanju objektov na slikah, rekurentne nevronske mreže, ki so zelo uspešne pri razpoznavanju govora, itd.\\
+
+Osnoven gradnik nevronskih mrež je \textit{perceptron}, ki ga opisuje funkcija 
+
+\begin{equation}
+    \mathrm{h}_{w,b} = \theta(\vec{w}^\intercal\cdot \vec{X}+ b)\>,
+\end{equation}
+
+kjer je $\vec{w}$ vektor uteži, $\vec{X}$ vektor vhodnih vrednosti, $b$ pa je neka konstanta, ki ji pravimo \textit{bias}.
+Preko tega tvorimo uteženo vsoto. Funkcije $\theta$ se imenuje \textit{aktivacijska funkcija}. Najbolj pogosta je
+\textit{sigmoidna} funkcija, ki je definirana kot
+
+\begin{equation}
+    \theta(x) = \frac{1}{1+e^{-x}}\>.
+\end{equation}
+
+Ta vpelje neke vrste nelinearnost v model. Če bi uporabili linearno funkcijo, bi namreč dobili linearno preslikavo. 
+Dandanes se sicer poleg sigmoidne funkcije uporabljajo tudi druge funkcije, verjetno je najbolj znana \textit{ReLU}
+funkcija \cite{agarap2019deep}, ki je definirana kot
+
+\begin{equation}
+    \theta(x) = \max(0,x)\>.
+\end{equation}
+
+Ta je boljša zaradi več razlogov, ampak v glavnem so prednosti, da se jo bistveno hitreje računa in da je bolj odporna
+na \textit{vanishing gradient} problem. Nevronske mreže se učijo preko dveh ključnih algoritmov in sicer \textit{back propagation}
+in \textit{gradient descent}. Back propagation je algoritem, ki nam omogoča, da izračunamo gradient funkcije izgube po
+vseh utežeh v nevronski mreži. S tem lahko popravimo uteži v nevronski mreži za en korak. Gradient descent pa je algoritem,
+ki nam omogoča, da se sprehodimo po funkciji izgube in poiščemo lokalni minimum. Problem, ki ga ima recimo sigmoida je, da
+ima majhno vrednost gradienta, drugot pa se funkcija asimptotsko obnaša in je gradient tam enak nič. Kar se zgodi je, da 
+se zniža vrednost gradienta za vsak sloj, ki ga imamo v nevronski mreži. To pomeni, da se bodo prvi sloji nepravilno 
+učili. Rečeno malo drugače, njihov gradient izgine in ker se to zgodi, bo tudi aktivacijska funkcija premikala vrednost 
+proti nič. Z uporabo ReLU funkcije tega problema nimamo, saj je gradient konstanten in ne izgine. To pomeni, da nam modeli 
+v splošnem hitreje konvergirajo. Seveda pa tudi ReLU funkcija ni brez svojih napak. Pojavi se lahko ravno kontra pojav, 
+torej \textit{exploding gradient}. Obstaja potem cela vrsta izboljšav, da bi se temu izognili. \\
 
 
 

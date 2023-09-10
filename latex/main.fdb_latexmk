@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1694356881 "main.aux" "main.bbl" "main" 1694356884 0
-  "./sources.bib" 1694356799 3325 5a6a73100902cdbfb9ee75bddb104d7f ""
+["bibtex main"] 1694358173 "main.aux" "main.bbl" "main" 1694358201 0
+  "./sources.bib" 1694357506 3551 7c8b8cec389770373def35d5c4d2c172 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/unsrt.bst" 1291868336 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1694356883 2153 4eb618ef117d18afb9a6acfff2a124cd "pdflatex"
+  "main.aux" 1694358200 2207 d243a72c57b3382568a9f36d44f21b0f "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1694356881 "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN12/latex/main.tex" "main.pdf" "main" 1694356884 0
+["pdflatex"] 1694358198 "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN12/latex/main.tex" "main.pdf" "main" 1694358201 0
   "C:/Users/Marko Urbanc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1694209903 81068 299f700eb05b1217173e62b88b513bd0 ""
   "C:/Users/Marko Urbanc/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1694207002 11548 f306a6e07565f4929b383b247c4ace3f ""
   "C:/Users/Marko Urbanc/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1691572099 24122251 e939fd6a89cc5679b97085233755a785 ""
@@ -33,7 +33,9 @@
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1247596667 37944 359e864bd06cde3b1cf57bb20757fb06 ""
+  "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb" 1247596673 33366 60462f3d16c3d0f024f1f856e64b09cd ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580393758 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575574700 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -59,6 +61,7 @@
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/generic/xstring/xstring.tex" 1673965817 48215 374fa42173896b227f2f50bc75dfda91 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.cfg" 1616070885 584 2a1075dd71571459f59146da9f7502ad ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty" 1358201372 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
+  "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amssymb.sty" 1358201372 13829 94730e64147574077f8ecfea9bb69af4 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd" 1358201372 961 6518c6525a34feb5e8250ffa91731cff ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd" 1358201372 961 d02606146ba5601b5645f987c92e6193 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty" 1686931788 2222 499d61426192c39efd8f410ee1a52b9c ""
@@ -126,13 +129,13 @@
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1673965817 123 a302f2c651a95033260db60e51527ae8 ""
-  "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN12/latex/main.tex" 1694356878 8515 58f98be4afb646160ada8f4ec9b7f73e ""
+  "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN12/latex/main.tex" 1694358198 11601 2d9d8c6f8def0606de4c5c94d432f69c ""
   "logo.png" 1693580566 8303 8f7f5965ff153bbc45aecaef5ccdb0ac ""
-  "main.aux" 1694356883 2153 4eb618ef117d18afb9a6acfff2a124cd "pdflatex"
-  "main.bbl" 1694356881 1086 273e86ca377ad0d3007a5e766f344150 "bibtex main"
-  "main.out" 1694356883 1381 bb401d27811116c2ff4ca3d8bd03c7d6 "pdflatex"
-  "main.tex" 1694356878 8515 58f98be4afb646160ada8f4ec9b7f73e ""
-  "main.toc" 1694356883 732 dbc9ac35031e6a5753ffebc3ae72c7ec "pdflatex"
+  "main.aux" 1694358200 2207 d243a72c57b3382568a9f36d44f21b0f "pdflatex"
+  "main.bbl" 1694358173 1202 c6fdd22c9afa65e566a817dbbe6590a7 "bibtex main"
+  "main.out" 1694358200 1381 bb401d27811116c2ff4ca3d8bd03c7d6 "pdflatex"
+  "main.tex" 1694358198 11601 2d9d8c6f8def0606de4c5c94d432f69c ""
+  "main.toc" 1694358200 732 b00f6fe92a5acc1345f815868e750331 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

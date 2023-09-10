@@ -26,4 +26,8 @@ Jerome~H. Friedman.
 \newblock Greedy function approximation: A gradient boosting machine.
 \newblock {\em The Annals of Statistics}, 29(5), 2001.
 
+\bibitem{agarap2019deep}
+Abien~Fred Agarap.
+\newblock Deep learning using rectified linear units (relu), 2019.
+
 \end{thebibliography}
