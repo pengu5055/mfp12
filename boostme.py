@@ -62,7 +62,7 @@ class BoostMe():
         return data_x, data_y
     
     @_internal_function_timer
-    def train(self, max_trees=1000, task_type="GPU", eval_metric="AUC", verbose=False):
+    def train(self, max_trees=1000, task_type="GPU", eval_metric="AUC", verbose=False, **kwargs):
         # --- Create the CatBoost Pool ---
         # Create the training and testing pools
         train_pool = Pool(data=self.train_x.to_numpy(), label=self.train_y.to_numpy(),
@@ -74,11 +74,11 @@ class BoostMe():
         # Create the CatBoost classifier
         self.model = CatBoostClassifier(iterations=max_trees, 
                                 task_type=task_type,
-                                learning_rate=0.1,  
+                                # learning_rate=0.1,  TODO: Add these back in after hyperparameter search
                                 loss_function='Logloss',
                                 eval_metric=eval_metric,
                                 use_best_model=True,
-                                verbose=verbose)
+                                verbose=verbose, **kwargs)
 
         # Train the model
         self.model.fit(train_pool, eval_set=test_pool, plot=False)
