@@ -217,7 +217,23 @@ Naloga zahteva od nas da za obe metodi, tako BDT kot NN, določimo uspešnost in
 Naj bomo pozorni na vpliv vhodnih parametrov na uspešnost in na število uporabljenih spremenljivk.
 
 \section{Opis reševanja}
+Reševanja sem se lotil tako, da sem si najprej malo ogledal profesorjevo kodo. Kmalu sem ugotovil, da despite 
+komentarjem in kakšnega docstringa v kodi, bo za razumevanje šlo hitreje če si sam napišem programe. As usual 
+je Python standardno orodje z bibliotekami \texttt{numpy}, \texttt{pandas}, \texttt{matplotlib}, \texttt{scikit-learn},
+\texttt{catboost} in \texttt{torch}. Sparking the debate oz. tekmovalnost med \texttt{tensorflow}, ki ga je uporabil 
+profesor in \texttt{pytorch}, ki ga imam jaz raje. \\
 
+Kot je zdaj navada sem si napisal nekaj razredov za lažje delo. Začel sem z razredom za BDT modele, ki sem ga poimenoval
+\texttt{BoostMe}. V njem sem definiral metode za učenje modela, za napovedovanje in za izris ROC krivulje. Za učenje sem
+uporabljal \texttt{catboost} knjižnico, bolj specifično \texttt{CatBoostClassifier}. Se mi zdi, da sem kar navdušen nad
+njo. \\
+
+Nato sem napisal razred za NN modele, ki sem ga poimenoval \texttt{WhereArtThouHiggs}. V njem sem definiral metode za
+ustvarjenje modela, za učenje modela, za napovedovanje in za izris ROC krivulje. Za ustvarjanje modela sem uporabil
+\texttt{torch} knjižnico, bolj specifično \texttt{torch.nn.Sequential}, ki sem ga napolnil z tremi sloji 
+\texttt{torch.nn.Linear} in aktivacijsko funkcijo \texttt{torch.nn.ReLU}. Zadnji sloj ima Sigmoidno aktivacijsko funkcijo.
+\texttt{torch.nn.Sigmoid}. Za učenje sem uporabil \textbf{Stochastic gradient descent} \texttt{torch.optim.SGD} in kot smo 
+rekli v uvodu kar \texttt{torch.nn.MSELoss} za funkcijo izgube.
 \section{Rezultati}
 
 

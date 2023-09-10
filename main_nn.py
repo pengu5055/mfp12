@@ -18,7 +18,7 @@ rawP = True
 # --- Run the Model ---
 # First lets measure raw performance
 if rawP:
-    epoch_range = np.arange(1, 100, 1)
+    epoch_range = np.arange(1, 21, 1)
     aucs = []
     time = []
     for e in epoch_range:
