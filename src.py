@@ -53,7 +53,7 @@ if __name__ == "__main__":
                                loss_function='Logloss',
                                eval_metric=eval_metric,
                                use_best_model=True,
-                               verbose=True)
+                               verbose=False)
 
     # Train the model
     model.fit(train_pool, eval_set=test_pool, plot=True)
@@ -66,11 +66,11 @@ if __name__ == "__main__":
     auc = roc_auc_score(vl_y, preds)
 
     print(f"AUC Score: {auc}")
-
+    print(model.evals_result_)
     # --- Plotting ---
     # Plot the ROC curve
     plt.figure()
-    plt.plot(model.evals_result_['validation']['Logloss'], label='Training Loss')
+    plt.plot(model.evals_result_['learn']['Logloss'], label='Training Loss')
     plt.plot(model.evals_result_['validation']['Logloss'], label='Testing Loss')
     plt.xlabel('Iteration')
     plt.ylabel('Logloss')
