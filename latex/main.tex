@@ -151,7 +151,7 @@ ki predstavljajo binarne odločitve lahko skonstruiramo končno uteženo funkcij
 
 kjer so $\vec{w}_i$ vektorji neznanih uteži. Tako $t_i$ kot $\vec{w}_i$ lahko določimo, v procesu učenja. 
 Nadgradnjo odločitvenih dreves predstavljajo pospešena odločitvena drevesa (angl. boosted decision trees), ki uporabljajo
-več odločitvenih dreves, ki so med seboj povezana. Temelijo pa na Gradient Boosting algoritmu \cite{Friedman_2001}, ki je 
+več odločitvenih dreves, ki so med seboj povezana. Temeljijo pa na Gradient Boosting algoritmu \cite{Friedman_2001}, ki je 
 bil razvit leta 1999 in je bil namenjen izboljšanju napovedi. Gradient Boosting algoritem je bil razvit za regresijske 
 probleme, vendar se ga da uporabiti tudi za klasifikacijske probleme in je v praksi zelo uspešen. \\
 
@@ -191,17 +191,30 @@ na \textit{vanishing gradient} problem. Nevronske mreže se učijo preko dveh kl
 in \textit{gradient descent}. Back propagation je algoritem, ki nam omogoča, da izračunamo gradient funkcije izgube po
 vseh utežeh v nevronski mreži. S tem lahko popravimo uteži v nevronski mreži za en korak. Gradient descent pa je algoritem,
 ki nam omogoča, da se sprehodimo po funkciji izgube in poiščemo lokalni minimum. Problem, ki ga ima recimo sigmoida je, da
-ima majhno vrednost gradienta, drugot pa se funkcija asimptotsko obnaša in je gradient tam enak nič. Kar se zgodi je, da 
+ima majhno vrednost gradienta, drugod pa se funkcija asimptotsko obnaša in je gradient tam enak nič. Kar se zgodi je, da 
 se zniža vrednost gradienta za vsak sloj, ki ga imamo v nevronski mreži. To pomeni, da se bodo prvi sloji nepravilno 
 učili. Rečeno malo drugače, njihov gradient izgine in ker se to zgodi, bo tudi aktivacijska funkcija premikala vrednost 
 proti nič. Z uporabo ReLU funkcije tega problema nimamo, saj je gradient konstanten in ne izgine. To pomeni, da nam modeli 
 v splošnem hitreje konvergirajo. Seveda pa tudi ReLU funkcija ni brez svojih napak. Pojavi se lahko ravno kontra pojav, 
 torej \textit{exploding gradient}. Obstaja potem cela vrsta izboljšav, da bi se temu izognili. \\
 
+Nevronska mreža je sestavljena iz poljubne topologije prej omenjenih perceptronov, ki na začetku sprejmejo karakteristiko 
+dogodka $\vec{x}$ v končni fazi pa vrnejo napoved $\hat{y}$, ki mora biti lim bližje pravi vrednosti $y$. Z uporabo ustrezne
+funkcije izgube, recimo MSE, definiran kot
 
+\begin{equation}
+    \mathrm{MSE} = \mathcal{L}(h) = \mathbb{E}||\vec{y}-\hat{y}||^2\>,
+\end{equation}
 
-
+se problem znova prevede na minimizacijo, kjer znova iščemo minimum funkcije izgube, za neznan nabor uteži $\vec{w}$ in konstant 
+$b_i$. Globoke nevronske mreže niso nič drugega, kot velike nevronske mreže, ali skupine le-teh.
 \section{Naloga}
+Naloga nam tokrat poda ves material potreben, tako kodo, kot vzorce, za ločevanje dogodkov Higgsovega bozona od ostalih procesov
+ozadja. V naboru simuliranih dogodkov je 18 karakteristik, katerih vsaka posamezno zelo slabo loči signal od ozadja. Preko ML pa 
+lahko dosežemo kar dober uspeh.\\
+
+Naloga zahteva od nas da za obe metodi, tako BDT kot NN, določimo uspešnost in narišemo ROC krivuljo, za nekaj tipičnih konfiguracij.
+Naj bomo pozorni na vpliv vhodnih parametrov na uspešnost in na število uporabljenih spremenljivk.
 
 \section{Opis reševanja}
 

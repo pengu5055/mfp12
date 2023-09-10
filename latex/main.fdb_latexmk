@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1694358173 "main.aux" "main.bbl" "main" 1694358201 0
+["bibtex main"] 1694358173 "main.aux" "main.bbl" "main" 1694358759 0
   "./sources.bib" 1694357506 3551 7c8b8cec389770373def35d5c4d2c172 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/unsrt.bst" 1291868336 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1694358200 2207 d243a72c57b3382568a9f36d44f21b0f "pdflatex"
+  "main.aux" 1694358758 2207 d243a72c57b3382568a9f36d44f21b0f "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1694358198 "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN12/latex/main.tex" "main.pdf" "main" 1694358201 0
+["pdflatex"] 1694358756 "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN12/latex/main.tex" "main.pdf" "main" 1694358759 0
   "C:/Users/Marko Urbanc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1694209903 81068 299f700eb05b1217173e62b88b513bd0 ""
   "C:/Users/Marko Urbanc/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1694207002 11548 f306a6e07565f4929b383b247c4ace3f ""
   "C:/Users/Marko Urbanc/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1691572099 24122251 e939fd6a89cc5679b97085233755a785 ""
@@ -129,13 +129,13 @@
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1673965817 123 a302f2c651a95033260db60e51527ae8 ""
-  "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN12/latex/main.tex" 1694358198 11601 2d9d8c6f8def0606de4c5c94d432f69c ""
+  "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN12/latex/main.tex" 1694358756 12768 6b4a2e3801de9b7546226ce639d7c5a6 ""
   "logo.png" 1693580566 8303 8f7f5965ff153bbc45aecaef5ccdb0ac ""
-  "main.aux" 1694358200 2207 d243a72c57b3382568a9f36d44f21b0f "pdflatex"
+  "main.aux" 1694358758 2207 d243a72c57b3382568a9f36d44f21b0f "pdflatex"
   "main.bbl" 1694358173 1202 c6fdd22c9afa65e566a817dbbe6590a7 "bibtex main"
-  "main.out" 1694358200 1381 bb401d27811116c2ff4ca3d8bd03c7d6 "pdflatex"
-  "main.tex" 1694358198 11601 2d9d8c6f8def0606de4c5c94d432f69c ""
-  "main.toc" 1694358200 732 b00f6fe92a5acc1345f815868e750331 "pdflatex"
+  "main.out" 1694358758 1381 bb401d27811116c2ff4ca3d8bd03c7d6 "pdflatex"
+  "main.tex" 1694358756 12768 6b4a2e3801de9b7546226ce639d7c5a6 ""
+  "main.toc" 1694358758 732 b00f6fe92a5acc1345f815868e750331 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
