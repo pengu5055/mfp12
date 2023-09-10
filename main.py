@@ -12,7 +12,7 @@ from boostme import BoostMe
 # Set to True to run the raw performance test
 rawP = False
 # Set to True to run the hyperparameter search for learning rate and max depth
-lr_md_search = True 
+lr_md_search = True
 
 # --- Create the BoostMe Object ---
 # Create the BoostMe object
@@ -54,6 +54,7 @@ if lr_md_search:
             auc = bm.performance()
             results[i, j] = [lr, md, time, auc]
     # Save the results
-    results = pd.DataFrame(results.reshape(-1, 4), columns=["Learning Rate", "Max Depth", "Time", "AUC"])
-    results.to_csv("results/lr_md_search_GPU.csv", index=False)
+    results = pd.DataFrame(results)
+    results.to_csv("results/lr_md_search_GPUv2.csv", index=False)
+
 
