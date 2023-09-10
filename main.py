@@ -12,7 +12,12 @@ from boostme import BoostMe
 # Set to True to run the raw performance test
 rawP = False
 # Set to True to run the hyperparameter search for learning rate and max depth
-lr_md_search = True
+lr_md_search = False
+# Set to True to run the learning rate sweep
+lr_sweep = True
+
+# --- Plot Settings ---
+c_set = ['#fff7f3','#fde0dd','#fcc5c0','#fa9fb5','#f768a1','#dd3497','#ae017e','#7a0177','#49006a']
 
 # --- Create the BoostMe Object ---
 # Create the BoostMe object
@@ -56,5 +61,19 @@ if lr_md_search:
     # Save the results
     results = pd.DataFrame(results)
     results.to_csv("results/lr_md_search_GPUv2.csv", index=False)
+
+if lr_sweep:
+    learning_rates = np.linspace(0.001, 0.1, 100)
+    aucs = []
+    times = []
+    for i, lr in enumerate(learning_rates):
+        print(f"Training with learning rate {lr}...")
+        m, time, = bm.train(max_trees=100, task_type="GPU", verbose=False, learning_rate=lr)
+        auc = bm.performance()
+        aucs.append(auc)
+        times.append(time)
+
+    # Save the results
+    np.savez("results/lr_sweep.npz", learning_rates=learning_rates, aucs=aucs, times=times)
 
 

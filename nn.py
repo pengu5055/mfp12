@@ -9,6 +9,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score
+from typing import Callable
 
 # --- Global Variables ---
 # Set the number of epochs to train for
@@ -23,6 +24,8 @@ HIDDEN_LAYERS = 3
 HIDDEN_NODES = 100
 # Set the dropout rate
 DROPOUT_RATE = 0.5
+# Cmap
+c_set = ['#fff7f3','#fde0dd','#fcc5c0','#fa9fb5','#f768a1','#dd3497','#ae017e','#7a0177','#49006a']
 
 class WhereAreThouHiggs():
     def __init__(self,
@@ -36,6 +39,17 @@ class WhereAreThouHiggs():
         # --- Load Data ---
         # Load data from HDF5
         self.rawdata = self._load_data()
+
+    def _internal_function_timer(func: Callable):
+        def wrapper(*args, **kwargs):
+            import time
+            start = time.time()
+            result = func(*args, **kwargs)
+            end = time.time()
+            print(f"Function {func.__name__} took {end - start} seconds to run.")
+            return result, end - start
+        return wrapper
+
 
     def _load_data(self):
         # Load data from HDF5
@@ -57,7 +71,7 @@ class WhereAreThouHiggs():
 
         return data_x, data_y
     
-    def _create_model(self):
+    def create_model(self):
         # Create the model
         self.model = nn.Sequential(
             nn.Linear(self.data_features.shape[0], self.data_features.shape[0]), # Input layer
@@ -87,19 +101,20 @@ class WhereAreThouHiggs():
 
         return self.train_loader, self.test_loader
     
+    @_internal_function_timer
     def train_model(self, epochs=EPOCHS, batch_size=BATCH_SIZE, learning_rate=LEARNING_RATE):
         # Split the data
         self._data_split(batch_size=batch_size)
 
         # Create the optimizer
-        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=LEARNING_RATE)
+        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=learning_rate)
 
         # Create the loss function
         self.loss_fn = nn.MSELoss()
 
         # Train the model
-        train_losses = []
-        test_losses = []
+        self.train_losses = []
+        self.test_losses = []
         for epoch in range(epochs):
             # Train
             train_loss = 0
@@ -138,26 +153,35 @@ class WhereAreThouHiggs():
                 test_loss += loss.item()
 
             # Save the losses
-            train_losses.append(train_loss / len(self.train_loader))
-            test_losses.append(test_loss / len(self.test_loader))
+            self.train_losses.append(train_loss / len(self.train_loader))
+            self.test_losses.append(test_loss / len(self.test_loader))
 
             # Print the loss
             print(f"Epoch {epoch + 1}/{EPOCHS} | Train Loss: {train_loss / len(self.train_loader)} | Test Loss: {test_loss / len(self.test_loader)}")
 
-        return self.train_losses, self.test_losses
-    
+        #return self.train_losses, self.test_losses NOTE add back in if needed
 
-    def plot_losses(self):
+    def plot_loss(self):
         # Plot the losses
         plt.figure()
-        plt.plot(self.train_losses, label="Train Loss")
-        plt.plot(self.test_losses, label="Test Loss")
+        plt.plot(self.train_losses, label="Train Loss", c=c_set[4])
+        plt.plot(self.test_losses, label="Test Loss", c=c_set[6])
         plt.xlabel("Epoch")
         plt.ylabel("Loss")
         plt.title("Loss vs. Epoch")
         plt.legend()
         plt.savefig("images/losses.png")
         plt.show()
+
+    def performance(self):
+        # Get predictions
+        preds = self.model(torch.tensor(self.vl_x.to_numpy()).to(self.device).float())
+
+        # Get the ROC AUC score
+        auc = roc_auc_score(torch.tensor(self.vl_y.to_numpy()), preds.detach().cpu().numpy())
+
+        print(f"AUC Score: {auc}")
+        return auc
 
     def plot_model(self):
         from torchviz import make_dot
