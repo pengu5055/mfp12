@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from nn import WhereAreThouHiggs
+import torch
 
 filename = "data/higgs-parsed/higgs-parsed.h5"
 NN = WhereAreThouHiggs(filename)
@@ -15,9 +16,10 @@ NN.create_model()
 rawP = False
 
 # Set to True to run the hyperparameter search for learning rate and max depth
-lr_sweep = True
+lr_sweep = False
 
-
+# Set to True to plot signal vs. background
+plot_sig_bk = True
 
 # --- Run the Model ---
 # First lets measure raw performance
