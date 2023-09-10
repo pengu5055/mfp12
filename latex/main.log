@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.9)  10 SEP 2023 23:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.9)  11 SEP 2023 00:13
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -492,7 +492,11 @@ runsystem(del main.aex)...executed.
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count344
 \l__pdf_internal_box=\box74
-) (main.aux)
+) (main.aux
+
+LaTeX Warning: Label `fig:BDT_ROC' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
@@ -533,6 +537,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring OFF on input line 49.
+ (main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -543,15 +548,22 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 Package translations Info: no dictionary file `translations-basic-dictionary-slovenian.trsl' found. on input line 49.
-<logo.png, id=4, 220.67175pt x 141.22992pt>
+<logo.png, id=48, 220.67175pt x 141.22992pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 52.
 (pdftex.def)             Requested size: 220.6712pt x 141.22955pt.
  [1
 
-{C:/Users/Marko Urbanc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./logo.png>]
-No file main.toc.
+{C:/Users/Marko Urbanc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./logo.png>] (main.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+ (C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
@@ -566,24 +578,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--81
  []
 
 
-LaTeX Warning: Citation `lamkhede2021recommendations' on page 2 undefined on input line 86.
-
-
-LaTeX Warning: Citation `Steck_Baltrunas_Elahi_Liang_Raimond_Basilico_2021' on page 2 undefined on input line 87.
-
-
 LaTeX Warning: Citation `10.1145/2959100.2959174' on page 2 undefined on input line 90.
-
-
-LaTeX Warning: Citation `esmaeilzadeh2022abuse' on page 2 undefined on input line 92.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 82--93
 
  []
-
-
-LaTeX Warning: Citation `BERT' on page 2 undefined on input line 99.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 94--101
@@ -596,20 +596,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--119
  []
 
 [2]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 121.
- (C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 121.
- (C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 Underfull \hbox (badness 10000) in paragraph at lines 133--137
 
  []
-
-
-LaTeX Warning: Citation `Friedman_2001' on page 3 undefined on input line 154.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 152--157
@@ -622,10 +611,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--166
  []
 
 [3]
-
-LaTeX Warning: Citation `agarap2019deep' on page 4 undefined on input line 183.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 189--200
 
  []
@@ -651,48 +636,53 @@ Overfull \hbox (9.69304pt too wide) in paragraph at lines 231--237
  []
 
 
-LaTeX Warning: Reference `fig:BDT_times' on page 5 undefined on input line 241.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 239--242
 
  []
 
 [5]
-<../images/raw_performance.png, id=59, 722.7pt x 361.35pt>
+<../images/raw_performance.png, id=121, 722.7pt x 361.35pt>
 File: ../images/raw_performance.png Graphic file (type png)
 <use ../images/raw_performance.png>
 Package pdftex.def Info: ../images/raw_performance.png  used on input line 245.
 (pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
 
-
-LaTeX Warning: Reference `fig:BDT_params' on page 6 undefined on input line 252.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 250--253
 
  []
 
-<../images/lr_sweep.png, id=60, 722.7pt x 361.35pt>
-File: ../images/lr_sweep.png Graphic file (type png)
-<use ../images/lr_sweep.png>
-Package pdftex.def Info: ../images/lr_sweep.png  used on input line 266.
-(pdftex.def)             Requested size: 310.4979pt x 155.25066pt.
+<../images/lr_sweepv2.png, id=123, 722.7pt x 361.35pt>
+File: ../images/lr_sweepv2.png Graphic file (type png)
+<use ../images/lr_sweepv2.png>
+Package pdftex.def Info: ../images/lr_sweepv2.png  used on input line 266.
+(pdftex.def)             Requested size: 241.49895pt x 120.75111pt.
+<../images/md_sweep.png, id=124, 722.7pt x 361.35pt>
+File: ../images/md_sweep.png Graphic file (type png)
+<use ../images/md_sweep.png>
+Package pdftex.def Info: ../images/md_sweep.png  used on input line 266.
+(pdftex.def)             Requested size: 241.49895pt x 120.75111pt.
 
-e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN12/latex/main.tex:266: LaTeX Error: File `../images/' not found.
+Underfull \hbox (badness 10000) in paragraph at lines 271--276
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.266     }
-           
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ []
 
-[6 <../images/raw_performance.png> <../images/lr_sweep.png>] [7] (main.bbl) [8] (main.aux)
+[6 <../images/raw_performance.png> <../images/lr_sweepv2.png> <../images/md_sweep.png>]
+<../images/catboost_loss.png, id=136, 462.528pt x 346.896pt>
+File: ../images/catboost_loss.png Graphic file (type png)
+<use ../images/catboost_loss.png>
+Package pdftex.def Info: ../images/catboost_loss.png  used on input line 279.
+(pdftex.def)             Requested size: 276.00105pt x 207.01175pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--286
+
+ []
+
+<../images/catboost_roc.png, id=138, 462.528pt x 346.896pt>
+File: ../images/catboost_roc.png Graphic file (type png)
+<use ../images/catboost_roc.png>
+Package pdftex.def Info: ../images/catboost_roc.png  used on input line 289.
+(pdftex.def)             Requested size: 276.00105pt x 207.01175pt.
+[7 <../images/catboost_loss.png> <../images/catboost_roc.png>] [8] (main.bbl) [9] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
@@ -702,29 +692,23 @@ L3 programming layer <2023-06-30>
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  B54CBB7996C8F015AF91E443303B3C97;1522.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 706814FEE0A12864E75142EDF3E113EA;1522.
  ) 
 Here is how much of TeX's memory you used:
- 20701 strings out of 475550
- 397003 string characters out of 5759194
+ 20716 strings out of 475550
+ 397654 string characters out of 5759194
  1931238 words of memory out of 5000000
- 41645 multiletter control sequences out of 15000+600000
+ 41651 multiletter control sequences out of 15000+600000
  562741 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,9n,79p,367b,942s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 77i,9n,79p,456b,942s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Marko Urbanc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (9 pages, 271593 bytes).
+Output written on main.pdf (10 pages, 376809 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 20 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 229 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -12,6 +12,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score
 from catboost import CatBoostClassifier, Pool
 from typing import Callable
+from catboost.utils import get_roc_curve
 
 c_set = ['#fff7f3','#fde0dd','#fcc5c0','#fa9fb5','#f768a1','#dd3497','#ae017e','#7a0177','#49006a']
 
@@ -96,7 +97,7 @@ class BoostMe():
         print(f"AUC Score: {auc}")
         return auc
 
-    def plot_roc(self):
+    def plot_loss(self):
         # --- Plotting ---
         plt.figure()
         plt.plot(self.model.evals_result_['learn']['Logloss'], label='Training Loss', c=c_set[4])
@@ -105,4 +106,22 @@ class BoostMe():
         plt.ylabel('Logloss')
         plt.title('CatBoost Loss')
         plt.legend()
+        plt.grid(c=c_set[2], alpha=0.4)
+        plt.savefig("images/catboost_loss.png")
         plt.show()
+
+    def plot_roc(self):
+        # Get the ROC curve
+        fpr, tpr, thresholds = get_roc_curve(self.model, Pool(self.vl_x, self.vl_y))
+        # Plot the ROC curve
+        plt.figure()
+        plt.plot(fpr, tpr, label='CatBoost', c=c_set[4])
+        plt.xlabel('False Positive Rate')
+        plt.ylabel('True Positive Rate')
+        plt.title('ROC Curve')
+        plt.legend()
+        plt.grid(c=c_set[2], alpha=0.4)
+        plt.savefig("images/catboost_roc.png")
+        plt.show()
+
+        return fpr, tpr, thresholds

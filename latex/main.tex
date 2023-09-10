@@ -254,22 +254,51 @@ izračuna kar precejšnja. Zdaj lahko vsi prepričujemo svoje starše, da potreb
 \begin{figure}[H]
     \centering
     \makebox[\textwidth][c]{%
-    \begin{minipage}{0.90\textwidth}
+    \begin{minipage}{0.70\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{../images/lr_sweep.png}
+        \includegraphics[width=\linewidth]{../images/lr_sweepv2.png}
     \end{minipage}%
     \hspace{0.1\textwidth}% 
-    \begin{minipage}{0.90\textwidth}
+    \begin{minipage}{0.70\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{../images/}
+        \includegraphics[width=\linewidth]{../images/md_sweep.png}
     \end{minipage}%
     }
     \caption{Vpliv \textit{learning rate} in \textit{max\_depth} na uspešnost BDT modela.}
+    \label{fig:BDT_params}
 \end{figure}
 
+Vidimo, da ocena za uspešnost modela lepo narašča z večanjem \textit{max\_depth} in \textit{learning rate}. Očitno v temu 
+primeru so vse globine od $6$ naprej odveč ker je rezultat relativno konstanten. \textit{Learning rate} ima velik vpliv 
+na uspešnost modela in vidimo da je lepo izbrati neko srednjo vrednost. Premala vrednost in bo model počasen, prevelika
+vrednost in bo model neuspešen. Izrisal sem pa tudi kako se vrednost funkcije izgube manjša za model z $100$ drevesi, 
+\textit{max\_depth} $= 6$ in \textit{learning rate} $= 0.1$. Rezultat je na sliki \ref{fig:BDT_ROC}. \\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../images/catboost_loss.png}
+    \caption{ROC krivulja za BDT model z $100$ drevesi, \textit{max\_depth} $= 6$ in \textit{learning rate} $= 0.1$.}
+    \label{fig:BDT_ROC}
+\end{figure}
+
+In seveda tudi ROC krivuljo za model z prej omenjenemi parametri in za model, ki ima spremenjeno število dreves na $1000$. 
+Rezultat je na sliki \ref{fig:BDT_ROC}. \\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{../images/catboost_roc.png}
+    \caption{ROC krivulja za BDT model z $100$ drevesi, \textit{max\_depth} $= 6$ in \textit{learning rate} $= 0.1$ ter za 
+    model z $1000$ drevesi, \textit{max\_depth} $= 6$ in \textit{learning rate} $= 0.1$.}
+    \label{fig:BDT_ROC}
+\end{figure}
+
+Vidimo, da je razlika med njima pravzaprav precej marginalna. Glede na to, da je prvi model porabil le $1.57$ s za učenje,
+medtem ko je drugi porabil $10.45$ s, se mi zdi da je prvi model boljša izbira, glede na majhno razliko v uspešnosti, a relativno 
+veliko ceno v času izračuna.
 \subsection{NN}
 V glavnem sem tu poskusil rekreirati profesorjeve rezultate. Zaradi velikosti podatkovnega seta in pa narave 
-učenja NN modelov, traja učenje kar nekaj časa. 
+učenja NN modelov, traja učenje kar nekaj časa. Žal zaradi mojih lastnih napak, nimam dovolj časa, da bi se 
+igral z vsemi parametri in bi lahko naredil kakšno boljšo analizo. 
 
 \section{Komentarji in izboljšave}
 

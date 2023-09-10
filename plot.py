@@ -13,6 +13,8 @@ lr_md_search = False
 
 lr_sweep = True
 
+md_sweep = False
+
 # --- Plot Settings ---
 
 c_set = ['#fff7f3','#fde0dd','#fcc5c0','#fa9fb5','#f768a1','#dd3497','#ae017e','#7a0177','#49006a']
@@ -73,7 +75,7 @@ if lr_md_search:
 # Plot the learning rate sweep
 if lr_sweep:
     # Load the data
-    with np.load("results/lr_sweep.npz") as data:
+    with np.load("results/lr_sweepv2.npz") as data:
         aucs = data["aucs"]
         times = data["times"]
         lrs = data["learning_rates"]
@@ -87,5 +89,24 @@ if lr_sweep:
     plt.ylabel("AUC")
     plt.title("AUC vs. Learning Rate @ MD=6, Trees=100")
     plt.grid(c=c_set[2], alpha=0.4)
-    plt.savefig("images/lr_sweep.png")
+    plt.savefig("images/lr_sweepv2.png")
+    plt.show()
+
+if md_sweep:
+    # Load the data
+    with np.load("results/md_sweep.npz") as data:
+        aucs = data["aucs"]
+        times = data["times"]
+        mds = data["max_depths"]
+    
+    # Plot the data
+    plt.figure(figsize=(10, 5))
+
+    # Create the heatmap
+    plt.plot(mds, aucs, c=c_set[4])
+    plt.xlabel("Max Depth")
+    plt.ylabel("AUC")
+    plt.title("AUC vs. Max Depth @ LR=0.1, Trees=100")
+    plt.grid(c=c_set[2], alpha=0.4)
+    plt.savefig("images/md_sweep.png")
     plt.show()

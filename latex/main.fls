@@ -197,8 +197,14 @@ INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-OUTPUT main.out
+INPUT .\main.out
+INPUT .\main.out
+INPUT main.out
+INPUT main.out
 OUTPUT main.pdf
+INPUT .\main.out
+INPUT .\main.out
+OUTPUT main.out
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\base\textcomp.sty
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\base\textcomp.sty
 INPUT .\logo.png
@@ -215,10 +221,10 @@ INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cm
 INPUT C:\Users\Marko Urbanc\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-OUTPUT main.toc
+INPUT .\main.toc
+INPUT .\main.toc
+INPUT main.toc
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
-INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
@@ -233,6 +239,9 @@ INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\ums
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+OUTPUT main.toc
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT ..\images\raw_performance.png
 INPUT ..\images\raw_performance.png
@@ -241,13 +250,34 @@ INPUT ..\images\raw_performance.png
 INPUT ..\images\raw_performance.png
 INPUT ..\images\raw_performance.png
 INPUT ..\images\raw_performance.png
-INPUT ..\images\lr_sweep.png
-INPUT ..\images\lr_sweep.png
-INPUT ..\images\lr_sweep.png
-INPUT ..\images\lr_sweep.png
-INPUT ..\images\lr_sweep.png
-INPUT ..\images\lr_sweep.png
-INPUT ..\images\lr_sweep.png
+INPUT ..\images\lr_sweepv2.png
+INPUT ..\images\lr_sweepv2.png
+INPUT ..\images\lr_sweepv2.png
+INPUT ..\images\lr_sweepv2.png
+INPUT ..\images\lr_sweepv2.png
+INPUT ..\images\lr_sweepv2.png
+INPUT ..\images\lr_sweepv2.png
+INPUT ..\images\md_sweep.png
+INPUT ..\images\md_sweep.png
+INPUT ..\images\md_sweep.png
+INPUT ..\images\md_sweep.png
+INPUT ..\images\md_sweep.png
+INPUT ..\images\md_sweep.png
+INPUT ..\images\md_sweep.png
+INPUT ..\images\catboost_loss.png
+INPUT ..\images\catboost_loss.png
+INPUT ..\images\catboost_loss.png
+INPUT ..\images\catboost_loss.png
+INPUT ..\images\catboost_loss.png
+INPUT ..\images\catboost_loss.png
+INPUT ..\images\catboost_loss.png
+INPUT ..\images\catboost_roc.png
+INPUT ..\images\catboost_roc.png
+INPUT ..\images\catboost_roc.png
+INPUT ..\images\catboost_roc.png
+INPUT ..\images\catboost_roc.png
+INPUT ..\images\catboost_roc.png
+INPUT ..\images\catboost_roc.png
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
