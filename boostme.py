@@ -18,13 +18,9 @@ c_set = ['#fff7f3','#fde0dd','#fcc5c0','#fa9fb5','#f768a1','#dd3497','#ae017e','
 class BoostMe():
     def __init__(self,
                  dataset_path: str,
-                 max_trees: int,
-                 task_type: str,
-                 verbose: bool = False,
                  ) -> None:
         # --- Global Variables ---
         self.dataset_path = dataset_path
-        self.max_trees = max_trees
         # --- Load Data ---
         # Load data from HDF5
         self.rawdata = self._load_data()
@@ -65,6 +61,7 @@ class BoostMe():
 
         return data_x, data_y
     
+    @_internal_function_timer
     def train(self, max_trees=1000, task_type="GPU", eval_metric="AUC", verbose=False):
         # --- Create the CatBoost Pool ---
         # Create the training and testing pools
@@ -88,7 +85,7 @@ class BoostMe():
 
         return self.model
     
-    def evaluate_perf(self):
+    def performance(self):
         # --- Performance ---
         # Get predictions
         preds = self.model.predict(self.vl_x)
