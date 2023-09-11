@@ -54,10 +54,10 @@ if lr_sweep:
     np.savez("results/NNlr_sweep.npz", learning_rates=learning_rates, aucs=aucs, times=times)
 
 if plot_sig_bk:
-    train = True
-    plot = False
+    train = False
+    plot = True
     if train:
-        m, time = NN.train_model(epochs=500, learning_rate=0.1)
+        m, time = NN.train_model(epochs=100, learning_rate=0.1)
         
         with torch.inference_mode():
             model = NN.model.to("cpu")
@@ -70,5 +70,5 @@ if plot_sig_bk:
             vl_y = data["arr_1"]
         
         
-        NN.plot_score(vl_y, y_hat, "images/NNsig_bk.png")
+        NN.plot_score(vl_y, y_hat, "images/NNsig_bk_10.png")
 

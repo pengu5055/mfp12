@@ -202,7 +202,7 @@ class WhereAreThouHiggs():
         plt.hist(score_sig, label="Signal", density=True, bins=30, histtype='step', color=c_set[4], facecolor='none')
         plt.hist(score_bkg, label="Background", density=True, bins=30, histtype='step', color=[c_set[6]], facecolor='none')
         plt.xlabel('Score')
-        plt.title("Training Score Sig/Bkg Plot")
+        plt.title("Training Score Sig/Bkg Plot @ Epochs=10")
         plt.ylabel("Fraction")
         plt.legend()
         plt.xlim(0, 1)
