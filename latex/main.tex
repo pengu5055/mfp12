@@ -87,7 +87,7 @@ podlagi vaših prejšnjih ogledov in ocen priporoča filme in serije, ki bi vam 
 drugih parametrih, ki jim Netflix pravi Kontekst \cite{Steck_Baltrunas_Elahi_Liang_Raimond_Basilico_2021}, pravzaprav 
 so pa to \textit{contextual bandits}, ki se uporabljajo v enem okusu strojnega učenja. Več o tem kasneje. V kolikor 
 sem uspel razumeti ta članek zgleda, da še več kot to, želijo praktično \textit{in real time} prilagajati priporočila, 
-glede na to kakšen je vaš t.i. \textit{intent} \cite{10.1145/2959100.2959174}. Oh in vsi, ki si med seboj delite 
+glede na to kakšen je vaš t.i. \textit{intent} \cite{Wu_Alvino_Smola_Basilico_2016}. Oh in vsi, ki si med seboj delite 
 Netflix račune, nikakor ne skrbite, tudi to vas zna nekoč tepst kakšen algoritem strojnega 
 učenja \cite{esmaeilzadeh2022abuse}. \\
 
@@ -132,7 +132,7 @@ izgube (angl. loss function) $\mathcal{L}(h)$
 
 kjer je $\mathrm{L}(\cdot,\cdot)$ gladka funkcija, ki opisuje oceno za kvaliteto napovedi, pri čemer so $(\vec{x}, \vec{y})$
 neodvisno vzorčene iz nabora $\mathcal{D}$ po porazdelitvi $\mathcal{P}(\cdot,\cdot)$. Po koncu učenja imamo torej na voljo 
-funkcijo $h(\vec{x})$, ki nam za nek vhodni nabor vrednosti $\hat{x}$ poda napoved $\hat{y} = \vec{h}(\hat{x})$., ki ustrezno
+funkcijo $h(\vec{x})$, ki nam za nek vhodni nabor vrednosti $\hat{x}$ poda napoved $\hat{y} = \vec{h}(\hat{x})$, ki ustrezno
 kategorizira ta nabor vrednosti.\\
 
 Funkcije $\vec{h}$ so v praksi sestavljene iz množice preprostih funkcij z prostimi parametri, kar na koncu seveda pomeni 
@@ -232,7 +232,9 @@ Nato sem napisal razred za NN modele, ki sem ga poimenoval \texttt{WhereArtThouH
 ustvarjenje modela, za učenje modela, za napovedovanje in za izris ROC krivulje. Za ustvarjanje modela sem uporabil
 \texttt{torch} knjižnico, bolj specifično \texttt{torch.nn.Sequential}, ki sem ga napolnil z tremi sloji 
 \texttt{torch.nn.Linear} in aktivacijsko funkcijo \texttt{torch.nn.ReLU}. Zadnji sloj ima Sigmoidno aktivacijsko funkcijo.
-\texttt{torch.nn.Sigmoid}. Za učenje sem uporabil \textbf{Stochastic gradient descent} \texttt{torch.optim.SGD} in kot smo 
+\texttt{torch.nn.Sigmoid}. To mi je malo smešno delalo, tako da sem kasneje zamenjal na svoj model, s tem da sem napisal razred
+\texttt{Net}, ki je podrazred \texttt{torch.nn.Module} in ga napolnil z prej omenjenimi sloji. Število skritih slojev je bilo tako $3$
+nevronov v njih pa $100$. Za učenje sem uporabil \textbf{Stochastic gradient descent} \texttt{torch.optim.SGD} in kot smo 
 rekli v uvodu kar \texttt{torch.nn.MSELoss} za funkcijo izgube.
 \section{Rezultati}
 \subsection{BDT}
@@ -258,7 +260,7 @@ izračuna kar precejšnja. Zdaj lahko vsi prepričujemo svoje starše, da potreb
         \centering
         \includegraphics[width=\linewidth]{../images/lr_sweepv2.png}
     \end{minipage}%
-    \hspace{0.1\textwidth}% 
+    \hspace{0.025\textwidth}% 
     \begin{minipage}{0.70\textwidth}
         \centering
         \includegraphics[width=\linewidth]{../images/md_sweep.png}

@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1694399346 "main.aux" "main.bbl" "main" 1694399586 0
+["bibtex main"] 1694399732 "main.aux" "main.bbl" "main" 1694399955 0
   "./sources.bib" 1694357506 3551 7c8b8cec389770373def35d5c4d2c172 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/unsrt.bst" 1291868336 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1694399585 5794 88d59858eae163b29765922aa286e322 "pdflatex"
+  "main.aux" 1694399955 5843 809a8c194c8c0221c72891982b05970e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1694399583 "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN12/latex/main.tex" "main.pdf" "main" 1694399586 0
+["pdflatex"] 1694399952 "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN12/latex/main.tex" "main.pdf" "main" 1694399955 0
   "../images/NN_ROC.png" 1694398721 50870 ea253c1bfceb0599f7548ac0b60692e3 ""
   "../images/NNlr_sweep.png" 1694398284 41173 7d92442479d4655c08b580e27393bd28 ""
   "../images/NNraw_performance.png" 1694397734 33067 2cdb633075a285385e22c8fd33e6961d ""
@@ -142,13 +142,13 @@
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1673965817 123 a302f2c651a95033260db60e51527ae8 ""
-  "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN12/latex/main.tex" 1694399582 21974 d06a136ece3d8e138ddd3129f29ffd62 ""
+  "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN12/latex/main.tex" 1694399952 22245 bfb0adb9805df914308e3ca6844bcae6 ""
   "logo.png" 1693580566 8303 8f7f5965ff153bbc45aecaef5ccdb0ac ""
-  "main.aux" 1694399585 5794 88d59858eae163b29765922aa286e322 "pdflatex"
-  "main.bbl" 1694399346 1202 c6fdd22c9afa65e566a817dbbe6590a7 "bibtex main"
-  "main.out" 1694399585 1523 54fee2a9ac0044665c4ef755334aece5 "pdflatex"
-  "main.tex" 1694399582 21974 d06a136ece3d8e138ddd3129f29ffd62 ""
-  "main.toc" 1694399585 872 b88483aae9a607795a542ad4170ba7d9 "pdflatex"
+  "main.aux" 1694399955 5843 809a8c194c8c0221c72891982b05970e "pdflatex"
+  "main.bbl" 1694399732 1482 28ff2599cc2e76870404d561c924d510 "bibtex main"
+  "main.out" 1694399955 1523 54fee2a9ac0044665c4ef755334aece5 "pdflatex"
+  "main.tex" 1694399952 22245 bfb0adb9805df914308e3ca6844bcae6 ""
+  "main.toc" 1694399955 872 b88483aae9a607795a542ad4170ba7d9 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

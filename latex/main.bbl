@@ -10,6 +10,12 @@ Harald Steck, Linas Baltrunas, Ehtsham Elahi, Dawen Liang, Yves Raimond, and
 \newblock Deep learning for recommender systems: A netflix case study.
 \newblock {\em AI Magazine}, 42(3):7--18, Nov. 2021.
 
+\bibitem{Wu_Alvino_Smola_Basilico_2016}
+Chao-Yuan Wu, Christopher~V. Alvino, Alexander~J. Smola, and Justin Basilico.
+\newblock Using navigation to improve recommendations in real-time.
+\newblock {\em Proceedings of the 10th ACM Conference on Recommender Systems},
+  2016.
+
 \bibitem{esmaeilzadeh2022abuse}
 Soheil Esmaeilzadeh, Negin Salajegheh, Amir Ziai, and Jeff Boote.
 \newblock Abuse and fraud detection in streaming services using heuristic-aware
