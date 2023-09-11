@@ -34,9 +34,9 @@ if rawP:
 # --- Plot Learning Rate and Max Depth Search ---
 if lr_sweep:
     with np.load("results/NNlr_sweep.npz", allow_pickle=True) as data:
-        learning_rates = data["arr_0"]
-        aucs = data["arr_1"]
-        times = data["arr_2"]
+        learning_rates = data["learning_rates"]
+        aucs = data["aucs"]
+        times = data["times"]
     
     # Plot the data
     plt.figure(figsize=(10, 5))

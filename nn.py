@@ -71,17 +71,18 @@ class WhereAreThouHiggs():
 
         return data_x, data_y
     
-    def create_model(self):
+    def create_model(self, hidden_size=100):
         # Create the model
-        self.model = nn.Sequential(
-            nn.Linear(self.data_features.shape[0], self.data_features.shape[0]), # Input layer
-            nn.ReLU(),
-            nn.Linear(self.data_features.shape[0], self.data_features.shape[0]), # Hidden layer
-            nn.ReLU(),
-            nn.Linear(self.data_features.shape[0], 1), # Output layer
-            nn.Sigmoid()
-        )
-
+        # self.model = nn.Sequential(
+        #     nn.Linear(self.data_features.shape[0], self.data_features.shape[0]//2), # Input layer
+        #     nn.ReLU(),
+        #     nn.Linear(self.data_features.shape[0]//2, 5), # Hidden layer
+        #     nn.ReLU(),
+        #     nn.Linear(5, 1), # Output layer
+        #     nn.Sigmoid()
+        # )
+        
+        self.model = self.Net(self.data_features.shape[0], hidden_size, 1)
         # Move the model to the device
         self.model.to(self.device)
 
@@ -131,8 +132,8 @@ class WhereAreThouHiggs():
                 loss = self.loss_fn(self.y_hat, y.float().unsqueeze(1))
 
                 # Backward pass
-                self.optimizer.step()
                 loss.backward()
+                self.optimizer.step()
 
                 # Add the loss
                 train_loss += loss.item()
@@ -157,7 +158,7 @@ class WhereAreThouHiggs():
             self.test_losses.append(test_loss / len(self.test_loader))
 
             # Print the loss
-            print(f"Epoch {epoch + 1}/{EPOCHS} | Train Loss: {train_loss / len(self.train_loader)} | Test Loss: {test_loss / len(self.test_loader)}")
+            print(f"Epoch {epoch + 1}/{epochs} | Train Loss: {train_loss / len(self.train_loader)} | Test Loss: {test_loss / len(self.test_loader)}")
 
         #return self.train_losses, self.test_losses NOTE add back in if needed
 
@@ -188,18 +189,43 @@ class WhereAreThouHiggs():
 
         make_dot(self.yhat, params=dict(list(self.model.named_parameters()))).render("nn_torchviz", format="png")
 
-    def plot_score(label, score, fn):
+    def plot_score(self, label, score, fn):
         score_bkg = score[np.where(label == 0)]
         score_sig = score[np.where(label == 1)]
-    
+
+        c1 = [c_set[4]] * 52876 
+        c2 = [c_set[6]] * 47124
+
+        i = 500
+
         plt.figure(figsize=[10, 5])
-        plt.hist(score_sig, label="Signal", density=True, bins=30, histtype='step', color=c_set[4])
-        plt.hist(score_bkg, label="Background", density=True, bins=30, histtype='step', color=c_set[6])
+        plt.hist(score_sig, label="Signal", density=True, bins=30, histtype='step', color=c_set[4], facecolor='none')
+        plt.hist(score_bkg, label="Background", density=True, bins=30, histtype='step', color=[c_set[6]], facecolor='none')
         plt.xlabel('Score')
         plt.title("Training Score Sig/Bkg Plot")
         plt.ylabel("Fraction")
         plt.legend()
+        plt.xlim(0, 1)
         plt.savefig(fn)
         plt.show()
+    
+    class Net(nn.Module):
+            def __init__(self, input_size, hidden_size, output_size, *args, **kwargs) -> None:
+                super().__init__(*args, **kwargs)
+                self.lay1 = nn.Linear(input_size, hidden_size)
+                self.relu1 = nn.ReLU()
+                self.lay2 = nn.Linear(hidden_size, hidden_size)
+                self.relu2 = nn.ReLU()
+                self.lay3 = nn.Linear(hidden_size, output_size)
+                self.sigmoid = nn.Sigmoid()
+            
+            def forward(self, x):
+                x = self.lay1(x)
+                x = self.relu1(x)
+                x = self.lay2(x)
+                x = self.relu2(x)
+                x = self.lay3(x)
+                x = self.sigmoid(x)
+                return x
 
     
