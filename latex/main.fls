@@ -285,6 +285,13 @@ INPUT ..\images\NNraw_performance.png
 INPUT ..\images\NNraw_performance.png
 INPUT ..\images\NNraw_performance.png
 INPUT ..\images\NNraw_performance.png
+INPUT ..\images\NNlr_sweep.png
+INPUT ..\images\NNlr_sweep.png
+INPUT ..\images\NNlr_sweep.png
+INPUT ..\images\NNlr_sweep.png
+INPUT ..\images\NNlr_sweep.png
+INPUT ..\images\NNlr_sweep.png
+INPUT ..\images\NNlr_sweep.png
 INPUT ..\images\NNsig_bk_10.png
 INPUT ..\images\NNsig_bk_10.png
 INPUT ..\images\NNsig_bk_10.png
@@ -306,6 +313,13 @@ INPUT ..\images\NNsig_bk_500.png
 INPUT ..\images\NNsig_bk_500.png
 INPUT ..\images\NNsig_bk_500.png
 INPUT ..\images\NNsig_bk_500.png
+INPUT ..\images\NN_ROC.png
+INPUT ..\images\NN_ROC.png
+INPUT ..\images\NN_ROC.png
+INPUT ..\images\NN_ROC.png
+INPUT ..\images\NN_ROC.png
+INPUT ..\images\NN_ROC.png
+INPUT ..\images\NN_ROC.png
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl

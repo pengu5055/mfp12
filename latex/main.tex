@@ -310,11 +310,23 @@ se testov z CPU sploh lotil nisem. Vseeno pa sem narisal odvisnost časa učenja
 \end{figure}
 
 Vidimo, da je čas precej linearno odvisen in kar dolg, še sploh v primerjavi z hitrostjo BDT modela. Se mi zdi,
-da bi jaz v praksi uporabljal BDT model, za reševanje tega problema.
+da bi jaz v praksi uporabljal BDT model, za reševanje tega problema. Zaradi časovne stiske nisem uspel narediti
+toliko hyperparameter sweepov, kot bi si želel. Definitivno bi si želel narediti tudi študijo za vpliv števila
+skritih slojev in števila nevronov na uspešnost modela, ampak saj veste, čas. Sem pa vseeno med pisanjem tega
+poročila pognal sweep za \textit{learning rate}, ki je poleg števila epoh verjetno še najbolj pomemben parameter.
 
-Za konec poglejmo pa še uspešnost modela pri napovedih. Začel sem konzervativno in uporabil samo $10$ epoh. Rezultat je 
-na sliki \ref{fig:NN_10}. Tu vrednost med $0$ in $1$ določi, kako prepričan je naš NN, da je to kar je dobil signal 
-Higgsovega bozona.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../images/NNlr_sweep.png}
+    \caption{Vpliv \textit{learning rate} na uspešnost NN modela.}
+    \label{fig:NN_lr}
+\end{figure}
+
+Moram priznati, da je rezultat nekoliko nepričakovan, saj sem mislil, da bo po nekaj časa uspešnost padla, ampak
+se zdi, da nekako uspe ostati še kar konstantna. Verjetno je tu spet neka srednja mera najboljša izbira. Bi bilo pa zanimivo
+pogledati, kako to zgleda v ekstremu. Za konec poglejmo pa še uspešnost modela pri napovedih. Začel sem konzervativno in 
+uporabil samo $10$ epoh. Rezultat je na sliki \ref{fig:NN_10}. Tu vrednost med $0$ in $1$ določi, kako prepričan je naš NN, 
+da je to kar je dobil signal Higgsovega bozona.
 
 \begin{figure}[H]
     \centering
@@ -344,16 +356,31 @@ ob neki smiselni uri, sem se odločil potegniti pozno v noč in pognati še $500
 \end{figure}
 
 To se pa zdi že kar sprejemljivo. Signal je lepo ločen od ozadja, vseeno je nekaj prekrivanja, ampak to je v redu.
-ROC krivulja za ta model je na sliki \ref{fig:NN_ROC}. \\
+ROC krivulje za vse modele so na sliki \ref{fig:NN_ROC}. Kot pričakovano iz prejšnjih slik, je korak med $10$ in $100$ 
+epohami veliko večji kot med $100$ in $500$ epohami. Želim si, da bi imel veliko več časa, da bi se s tem lahko bolj igral. \\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../images/NN_ROC.png}
+    \caption{ROC krivulje za NN modele z $10$, $100$ in $500$ epohami.}
+    \label{fig:NN_ROC}
+\end{figure}
 
 
 \section{Komentarji in izboljšave}
 Predvsem je problem pri tej nalogi, da je ML tako čudovito področje, meni pa je zmanjkalo časa, da bi se lahko
-igral z njim v tem akademskem smislu. Želim si tudi, da bi lahko izrisal tudi kakšne lepše grafe dejanskih
-rezultatov, ker trenutno je bilo vse skupaj malo bolj abstrahirano samo na te hiperparametre. Pravzaprav 
-bi si pri vseh grafih želel kaj dodati, ampak žal mi je zmanjkalo časa. \\
+igral z njim v tem akademskem smislu. Toliko pojavov bi se dalo raziskati, recimo to kar sem omenil v uvodu 
+\textit{vanishing gradient} problem, \textit{exploding gradient} problem, \textit{overfitting}, \textit{underfitting},
+Želim si tudi, da bi lahko izrisal tudi kakšne lepše grafe dejanskih rezultatov, ker trenutno je bilo vse skupaj malo 
+bolj abstrahirano samo na te hiperparametre (no ja za NN je potem še kar okay ratalo). Pravzaprav bi si pri vseh grafih 
+želel kaj dodati, ampak žal mi je zmanjkalo časa. Zelo škoda, ker mi je bila verjetno ta naloga od vseh najbolj zabavna, 
+sploh kar se tiče programerskega duha.  \\
 
-Hvala za vso znanje, ki sem ga pridobil profesor. 
+\begin{quotation}
+    \centering
+    \textit{Hvala za vso znanje, ki sem ga pridobil profesor.}
+\end{quotation}
+
 
 \newpage
 \bibliographystyle{unsrt}
