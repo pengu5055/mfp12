@@ -8,8 +8,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_auc_score, roc_curve
 from typing import Callable
+
 
 # --- Global Variables ---
 # Set the number of epochs to train for
@@ -208,6 +209,19 @@ class WhereAreThouHiggs():
         plt.xlim(0, 1)
         plt.savefig(fn)
         plt.show()
+    
+    def plot_roc(self, label, score, fn):
+        fpr, tpr, thresholds = roc_curve(label, score)
+        plt.plot(fpr, tpr, label='NN', c=c_set[4])
+        plt.xlabel('False Positive Rate')
+        plt.ylabel('True Positive Rate')
+        plt.title('ROC Curve')
+        plt.grid(c=c_set[2], alpha=0.4)
+        plt.plot(np.linspace(0, 1, 100), np.linspace(0, 1, 100), c=c_set[-1], alpha=0.4, ls="--")
+        plt.savefig(fn)
+        plt.show()
+
+        return fpr, tpr, thresholds
     
     class Net(nn.Module):
             def __init__(self, input_size, hidden_size, output_size, *args, **kwargs) -> None:

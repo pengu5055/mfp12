@@ -114,6 +114,7 @@ if plot_roc:
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
     plt.title('ROC Curve')
+    plt.plot(np.linspace(0, 1, 100), np.linspace(0, 1, 100), c=c_set[-1], alpha=0.4, ls="--")
     plt.legend()
     plt.grid(c=c_set[2], alpha=0.4)
     plt.savefig("images/catboost_roc.png")

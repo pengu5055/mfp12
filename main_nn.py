@@ -19,7 +19,13 @@ rawP = False
 lr_sweep = False
 
 # Set to True to plot signal vs. background
-plot_sig_bk = True
+plot_sig_bk = False
+
+# Set to True to plot the ROC curve
+roc = True
+
+c_set = ['#fff7f3','#fde0dd','#fcc5c0','#fa9fb5','#f768a1','#dd3497','#ae017e','#7a0177','#49006a']
+
 
 # --- Run the Model ---
 # First lets measure raw performance
@@ -71,4 +77,38 @@ if plot_sig_bk:
         
         
         NN.plot_score(vl_y, y_hat, "images/NNsig_bk_10.png")
+
+if roc:
+    # Load the data
+    with np.load("results/NNsig_bk.npz", allow_pickle=True) as data:
+            y_hat1 = data["arr_0"]
+            vl_y1 = data["arr_1"]
+    
+    fpr1, tpr1, t1 = NN.plot_roc(vl_y1, y_hat1, "images/NN_roc.png")
+
+    # Load the data
+    with np.load("results/NNsig_bk_100.npz", allow_pickle=True) as data:
+            y_hat2 = data["arr_0"]
+            vl_y2 = data["arr_1"]
+    
+    fpr2, tpr2, t2 = NN.plot_roc(vl_y2, y_hat2, "images/NN_roc_100.png")
+
+    # Load the data
+
+    with np.load("results/NNsig_bk_500.npz", allow_pickle=True) as data:
+            y_hat3 = data["arr_0"]
+            vl_y3 = data["arr_1"] 
+        
+    fpr3, tpr3, t3 = NN.plot_roc(vl_y3, y_hat3, "images/NN_roc_500.png")
+    plt.plot(fpr1, tpr1, label='Epochs = 10', c=c_set[4])
+    plt.plot(fpr2, tpr2, label='Epochs = 100', c=c_set[6])
+    plt.plot(fpr3, tpr3, label='Epochs = 500', c=c_set[8])
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('ROC Curve')
+    plt.grid(c=c_set[2], alpha=0.4)
+    plt.plot(np.linspace(0, 1, 100), np.linspace(0, 1, 100), c=c_set[-1], alpha=0.4, ls="--")
+    plt.legend()
+    plt.savefig("images/NN_roc.png")
+    plt.show()
 

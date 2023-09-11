@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.9)  11 SEP 2023 00:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.9)  11 SEP 2023 04:10
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -645,7 +645,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 239--242
 File: ../images/raw_performance.png Graphic file (type png)
 <use ../images/raw_performance.png>
 Package pdftex.def Info: ../images/raw_performance.png  used on input line 245.
-(pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
+(pdftex.def)             Requested size: 345.0pt x 172.49767pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 250--253
 
@@ -671,7 +671,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 271--276
 File: ../images/catboost_loss.png Graphic file (type png)
 <use ../images/catboost_loss.png>
 Package pdftex.def Info: ../images/catboost_loss.png  used on input line 279.
-(pdftex.def)             Requested size: 276.00105pt x 207.01175pt.
+(pdftex.def)             Requested size: 345.0pt x 258.76335pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 284--286
 
@@ -681,28 +681,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--286
 File: ../images/catboost_roc.png Graphic file (type png)
 <use ../images/catboost_roc.png>
 Package pdftex.def Info: ../images/catboost_roc.png  used on input line 289.
-(pdftex.def)             Requested size: 276.00105pt x 207.01175pt.
-[7 <../images/catboost_loss.png> <../images/catboost_roc.png>]
+(pdftex.def)             Requested size: 345.0pt x 258.76335pt.
+[7 <../images/catboost_loss.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 299--304
 
  []
 
-<../images/NNraw_performance.png, id=148, 722.7pt x 361.35pt>
+<../images/NNraw_performance.png, id=147, 722.7pt x 361.35pt>
 File: ../images/NNraw_performance.png Graphic file (type png)
 <use ../images/NNraw_performance.png>
 Package pdftex.def Info: ../images/NNraw_performance.png  used on input line 307.
-(pdftex.def)             Requested size: 276.00105pt x 137.99812pt.
+(pdftex.def)             Requested size: 345.0pt x 172.49767pt.
+[8 <../images/catboost_roc.png>]
+<../images/NNsig_bk_10.png, id=155, 722.7pt x 361.35pt>
+File: ../images/NNsig_bk_10.png Graphic file (type png)
+<use ../images/NNsig_bk_10.png>
+Package pdftex.def Info: ../images/NNsig_bk_10.png  used on input line 321.
+(pdftex.def)             Requested size: 345.0pt x 172.49767pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--321
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
+
+ []
+
+<../images/NNsig_bk_100.png, id=157, 722.7pt x 361.35pt>
+File: ../images/NNsig_bk_100.png Graphic file (type png)
+<use ../images/NNsig_bk_100.png>
+Package pdftex.def Info: ../images/NNsig_bk_100.png  used on input line 331.
+(pdftex.def)             Requested size: 345.0pt x 172.49767pt.
+[9 <../images/NNraw_performance.png> <../images/NNsig_bk_10.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 336--338
+
+ []
+
+<../images/NNsig_bk_500.png, id=167, 722.7pt x 361.35pt>
+File: ../images/NNsig_bk_500.png Graphic file (type png)
+<use ../images/NNsig_bk_500.png>
+Package pdftex.def Info: ../images/NNsig_bk_500.png  used on input line 341.
+(pdftex.def)             Requested size: 345.0pt x 172.49767pt.
+
+LaTeX Warning: Reference `fig:NN_ROC' on page 10 undefined on input line 347.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--323
+Underfull \hbox (badness 10000) in paragraph at lines 351--355
 
  []
 
-[8 <../images/NNraw_performance.png>] (main.bbl) [9] (main.aux)
+[10 <../images/NNsig_bk_100.png> <../images/NNsig_bk_500.png>] [11] (main.bbl) [12] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
@@ -715,20 +744,20 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6572BC258CDD48A3BC2FA33D3B9A6A35;1522.
+(rerunfilecheck)             Checksum: 30C0099D001AC14B00BF62D3989F3AAB;1523.
  ) 
 Here is how much of TeX's memory you used:
- 20725 strings out of 475550
- 397949 string characters out of 5759194
+ 20756 strings out of 475550
+ 398750 string characters out of 5759194
  1931238 words of memory out of 5000000
- 41659 multiletter control sequences out of 15000+600000
+ 41684 multiletter control sequences out of 15000+600000
  562741 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,9n,79p,456b,942s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Marko Urbanc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (10 pages, 406047 bytes).
+Output written on main.pdf (13 pages, 467679 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 259 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
+ 143 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -242,7 +242,7 @@ CPU pa Ryzen 5 3600X. Rezultati so prikazani na sliki \ref{fig:BDT_times}. \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../images/raw_performance.png}
+    \includegraphics[width=1\textwidth]{../images/raw_performance.png}
     \caption{Čas izračuna BDT modela na GPU in CPU.}
     \label{fig:BDT_times}
 \end{figure}
@@ -276,7 +276,7 @@ vrednost in bo model neuspešen. Izrisal sem pa tudi kako se vrednost funkcije i
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../images/catboost_loss.png}
+    \includegraphics[width=1\textwidth]{../images/catboost_loss.png}
     \caption{ROC krivulja za BDT model z $100$ drevesi, \textit{max\_depth} $= 6$ in \textit{learning rate} $= 0.1$.}
     \label{fig:BDT_ROC}
 \end{figure}
@@ -286,7 +286,7 @@ Rezultat je na sliki \ref{fig:BDT_ROC}. \\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../images/catboost_roc.png}
+    \includegraphics[width=1\textwidth]{../images/catboost_roc.png}
     \caption{ROC krivulja za BDT model z $100$ drevesi, \textit{max\_depth} $= 6$ in \textit{learning rate} $= 0.1$ ter za 
     model z $1000$ drevesi, \textit{max\_depth} $= 6$ in \textit{learning rate} $= 0.1$.}
     \label{fig:BDT_ROC}
@@ -304,13 +304,47 @@ se testov z CPU sploh lotil nisem. Vseeno pa sem narisal odvisnost časa učenja
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../images/NNraw_performance.png}
+    \includegraphics[width=1\textwidth]{../images/NNraw_performance.png}
     \caption{Čas učenja NN modela na GPU.}
     \label{fig:NN_times}
 \end{figure}
 
 Vidimo, da je čas precej linearno odvisen in kar dolg, še sploh v primerjavi z hitrostjo BDT modela. Se mi zdi,
 da bi jaz v praksi uporabljal BDT model, za reševanje tega problema.
+
+Za konec poglejmo pa še uspešnost modela pri napovedih. Začel sem konzervativno in uporabil samo $10$ epoh. Rezultat je 
+na sliki \ref{fig:NN_10}. Tu vrednost med $0$ in $1$ določi, kako prepričan je naš NN, da je to kar je dobil signal 
+Higgsovega bozona.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../images/NNsig_bk_10.png}
+    \caption{Porazdelitev izhodov za NN model z $10$ epohami.}
+    \label{fig:NN_10}
+\end{figure}
+
+Vidimo, da pri samo $10$ epohah, model še ni dovolj dober. Signal je neprepoznaven od ozadja in izbira je bolj ali manj
+naključna. Poglejmo še kako se model obnese pri $100$ epohah. Rezultat je na sliki \ref{fig:NN_100}. \\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../images/NNsig_bk_100.png}
+    \caption{Porazdelitev izhodov za NN model z $100$ epohami.}
+    \label{fig:NN_100}
+\end{figure}
+
+Tu je razlika že boljša. Moč je ločiti signal od ozadja, ampak se precej prekrivata. Namesto, da bi ta projekt oddal
+ob neki smiselni uri, sem se odločil potegniti pozno v noč in pognati še $500$ epoh. Rezultat je na sliki \ref{fig:NN_500}. \\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../images/NNsig_bk_500.png}
+    \caption{Porazdelitev izhodov za NN model z $500$ epohami.}
+    \label{fig:NN_500}
+\end{figure}
+
+To se pa zdi že kar sprejemljivo. Signal je lepo ločen od ozadja, vseeno je nekaj prekrivanja, ampak to je v redu.
+ROC krivulja za ta model je na sliki \ref{fig:NN_ROC}. \\
 
 
 \section{Komentarji in izboljšave}
@@ -319,7 +353,7 @@ igral z njim v tem akademskem smislu. Želim si tudi, da bi lahko izrisal tudi k
 rezultatov, ker trenutno je bilo vse skupaj malo bolj abstrahirano samo na te hiperparametre. Pravzaprav 
 bi si pri vseh grafih želel kaj dodati, ampak žal mi je zmanjkalo časa. \\
 
-Hvala za vso znanje, ki sem ga pridobil profesor. \\
+Hvala za vso znanje, ki sem ga pridobil profesor. 
 
 \newpage
 \bibliographystyle{unsrt}
