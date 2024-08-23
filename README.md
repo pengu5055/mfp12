@@ -1,0 +1,44 @@
+# DN 12. Strojno učenje (Iskanje Higgsovega bozona)
+Zadnja naloga pa je prvi okus strojnega učenja. Tega se lotimo z iskanjem Higgsovega bozona, katerega odkritje je bilo eno največjih odkritij v fiziki v zadnjih desetletjih, ki ne bi bilo možno brez strojnega učenja.
+
+
+## Navodila
+V tej nalogi dobimo vse kar je potrebno. Tako vzorce, kot kodo za ločevanje dogodkov, kjer nastane Higgsov bozon od ostalih procesov ozadja. Naloga želi, da uporabimo BDT (Boosted Decision Trees) in NN (Neural Networks) za ločevanje teh dogodkov. Za vsako metodo določimo uspešnost in narišemo ROC krivuljo. Potem pa se malo igramo z različnimi hiperparametri in vidimo kako se to odraža na uspešnosti.
+
+## Napotki
+No hate, no shade profesorju, ampak koda, ki je bila podana ob nalogi je bila meni osebno težko berljiva, zato sem napisal svojo. Vseeno pa je bilo zelo koristno, da sem imel nekaj za primerjavo. Ker to nalogo objavljam dolgo po oddaji naloge, se ne spomnim več vseh detajlov in bom s tem zaključil, da ne trosim neumnosti.
+
+## Kar sem jaz naredil
+**Tu je verjetno tisto kar te najbolj zanima**. 
+
+<details>
+  <summary>Standard Disclaimer</summary>
+  Objavljam tudi kodo. Ta je bila tokrat v svojem repozitoriju od začetka, ker sem teh zadnjih nekaj nalog opravljal med poletjem. Koda bi morala biti razmeroma pokomentirana, sploh v kasnejših nalogah.  
+  
+</details>
+
+Vseeno pa priporočam, da si najprej sam poskusiš rešiti nalogo. As always za vprašanja sem na voljo.
+
+
+* [**Poročilo DN12**](https://pengu5055.github.io/fmf-pdf/year3/mfp/Marko_Urban%C4%8D_12.pdf)
+* [**Source repozitorij DN12**](https://github.com/pengu5055/mfp12)
+
+Priznam, da zna biti source repozitorij nekoliko kaotičen. Over time sem se naučil boljše prakse. Tole bi morali biti glavni datoteki za obe metodi.
+
+* [**main.py** za BDT](https://github.com/pengu5055/mfp12/blob/main/main.py)
+* [**main_nn.py** za NN](https://github.com/pengu5055/mfp12/blob/main/main_nn.py)
+
+## Citiranje
+*Malo za šalo, malo za res*.. če želiš izpostaviti/omeniti/se sklicati ali pa karkoli že, na moje delo, potem ga lahko preprosto citiraš kot:
+
+```bib
+@misc{Urbanč_mfpDN12, 
+  title={Strojno učenje}, 
+  url={https://pengu5055.github.io/fmf-pages/year3/mfp/dn12.html}, 
+  journal={Marko’s Chest}, 
+  author={Urbanč, Marko}, 
+  year={2023}, 
+  month={Oct}
+} 
+```
+To je veliko boljše kot prepisovanje.
